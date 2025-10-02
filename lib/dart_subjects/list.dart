@@ -17,6 +17,9 @@ void main() {
   numbers.add(7); 
   numbers.remove(2); 
   print(numbers); 
+  print(animals); 
+  print(mixedArray); 
+  print(fruits); 
 
 }
 
