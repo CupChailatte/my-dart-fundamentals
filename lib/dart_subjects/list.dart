@@ -13,6 +13,11 @@ void main() {
   List<String> animals = ["Deer", "Koala", "Tiger"];
   List<dynamic> mixedArray = ["Cocoa", 14, false];
   List<String> fruits = ["apple", "pear", "orange", "banana"];
+
+  numbers.add(7); 
+  numbers.remove(2); 
+  print(numbers); 
+
 }
 
 /*
