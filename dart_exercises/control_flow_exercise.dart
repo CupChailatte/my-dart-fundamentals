@@ -1,4 +1,3 @@
-
 /*
 1. If/Else Exercise
 Write a program that checks if a number is positive, negative, or zero and prints a message.
@@ -18,81 +17,87 @@ Use a while loop to decrease it by 1 and print each value until it reaches 0.
 Ask the user for a password (simulate with a variable).
 Keep asking until the correct password is entered (simulate with a do-while loop and a hardcoded password).
 
+
+
+TODO 1 - - - INTERMEDIATE EXERCISE 
+* Exercise: Filter and Group Students
+You have a List<Map<String, dynamic>> called students.
+Each map contains a student's "name" and "score".
+
+Tasks:
+
+Print the names of all students who scored above 80.
+Group students into two lists: those who passed (score >= 60) and those who failed (score < 60).
+Print both groups.
+Hint:
+Use loops, conditionals, and lists/maps to solve this.
+
+
+
+
+
+
+
+
+
+
+
  */
 
-void main(){
+void main() {
+  //* 1. if else exercise
+  int negNum = -100;
+  int posNum = 3;
+  int zero = 0;
+  int choosenNumber = zero;
 
-
-
-//* 1. if else exercise 
-  int negNum = -100; 
-  int posNum = 3; 
-  int zero = 0; 
-  int choosenNumber = zero; 
-
-  if (choosenNumber > 0){
-    print("positive number"); 
-  } else if (choosenNumber == 0){
-    print("zero"); 
+  if (choosenNumber > 0) {
+    print("positive number");
+  } else if (choosenNumber == 0) {
+    print("zero");
   } else {
-    print("negative number"); 
-  } 
- 
+    print("negative number");
+  }
 
-//* 2. Switch statement exercise
- String day = "Friday"; //could be user input. 
-  switch(day){
+  //* 2. Switch statement exercise
+  String day = "Friday"; //could be user input.
+  switch (day) {
     case "Monday":
-     print("First day of the week!");
-     break; 
-    case "Wednesday": 
-     print("Soon friday!!"); 
-     break;
-    case "Friday": 
-     print("YAHOO ITS FRIDAY"); 
-     break; 
-     default:
-     print("A normal day..."); 
+      print("First day of the week!");
+      break;
+    case "Wednesday":
+      print("Soon friday!!");
+      break;
+    case "Friday":
+      print("YAHOO ITS FRIDAY");
+      break;
+    default:
+      print("A normal day...");
   }
 
-
-
-//* 3. For Loop Exercise 
-for (int i = 0; i <= 20; i++){
-  int evenNumber = i; 
-  if(i % 2 == 0) //checks for even number 
-    print("Even number: $evenNumber"); 
+  //* 3. For Loop Exercise
+  for (int i = 0; i <= 20; i++) {
+    int evenNumber = i;
+    if (i % 2 == 0) //checks for even number
+      print("Even number: $evenNumber");
   }
 
+  //* 4. While Loop Exercise
 
+  int startNumber = 10;
+  while (startNumber != 0) {
+    //if number not 0
+    startNumber--; // decrease by 1.
+    print("Counting down: ${startNumber + 1} "); //prints.
+  }
 
-//* 4. While Loop Exercise
-
-int startNumber = 10; 
-while (startNumber != 0){ //if number not 0
-  startNumber--; // decrease by 1. 
-  print("Counting down: ${startNumber + 1} "); //prints. 
-}
-
-
-
-//* 5. Do-While Loop Exercise  
-  int passTry = 5600; 
-  const int password = 5647; 
+  //* 5. Do-While Loop Exercise
+  int passTry = 5600;
+  const int password = 5647;
   do {
-     print(passTry); //prints the tired passwords
-     passTry++; //password tries goes up by 1. 
-
-  } while (passTry != password); //if tried password is not the same as the true password, the loop goes on until it finds it. 
-  print("Correct password found! : ${passTry}"); 
- 
- 
+    print(passTry); //prints the tired passwords
+    passTry++; //password tries goes up by 1.
+  } while (passTry !=
+      password); //if tried password is not the same as the true password, the loop goes on until it finds it.
+  print("Correct password found! : ${passTry}");
 }
-
-
-
-
-
-
-
-

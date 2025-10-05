@@ -4,33 +4,19 @@
 
 void main(){
 
-//? Map in a List
-  List<Map<String, dynamic>> workers = [{
-    "name": "John Winston", 
-    "trade": "Electrician",
-    "Experience": 12, 
-    "Age": 31, 
-    "Salary": 3200, 
-  },{
-     "name": "Ron Murrs", 
-    "trade": "Plumber",
-    "Experience": 7, 
-    "Age": 26, 
-    "Salary": 2530, 
-  }
-    
 
-  ];
+    Map<String, int> students = {
+      "John": 67, 
+     "Mike": 44, 
+     "Yosa": 70, 
+     "Kira": 83, 
+    }; 
 
-  print(workers[1]);  
-
-
-  //? List in a Map 
-  Map<String, List<String>> complementaryClasses= {
-    "Science": ["Luke", "Sara", "Jamie"], 
-    "Sports": ["Hugh", "Mary", "Oscar"], 
-    "Math": ["Dinkol", "Tony", "Ruth"]
-  }; 
-
-   print(complementaryClasses.keys); 
+    students.forEach((student, score) { //key = student,, value = score 
+      if (score > 60) { //if score is more or is 60 , prints the students that passed. 
+        print("$student: passed");
+      } else {
+        print("$student: failed"); //prints students that failed. 
+      }
+    });
 }
