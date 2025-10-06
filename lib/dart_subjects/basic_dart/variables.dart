@@ -5,3 +5,4 @@ bool isStudent = false;
 var dynamicVar = "I can be anything";
 const gender = "Female";
 final String country = "Wonderland";
+
