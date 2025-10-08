@@ -54,11 +54,66 @@ class Manager extends Employee {
   }) : super(name: name, salary: salary);
 
   @override
-  void getDepartmentDetails() {
+  void getDetails() {
     super.getDetails();
     print("$name works in $department");
   }
 }
+
+
+
+
+
+
+
+
+/***************************************************************************************** */
+
+
+//abstract class acting as template, contract.
+abstract class Drawable{
+  String color; 
+  Drawable(this.color); 
+  double calculateArea(); //abstract method¨
+
+}
+
+class Rectangle extends Drawable{
+  double width; 
+  double height; 
+  Rectangle(String color, this.width, this.height) : super(color); 
+
+  double calculateArea(){
+    return width * height; 
+  }
+
+}
+
+/***************************************************************************************** */
+
+mixin Loggable{
+   void log(message){
+    print("[LOG] TIME: $message"); 
+  }
+}
+
+
+class Service with Loggable{
+
+
+}
+
+class AuthMiddleWare with Loggable{
+
+}
+
+
+
+
+
+
+
+/***************************************************************************************** */
 
 void main() {
   final bank1 = BankAccount(1000);
@@ -79,6 +134,26 @@ void main() {
 
   Manager manager2 = Manager(name: "Cassie", salary: 4500, department: "HR");
   manager2.getDetails();
-  manager1.getDepartmentDetails();
-  manager2.getDepartmentDetails(); 
+  manager1.getDetails();
+  manager2.getDetails(); 
+
+    print(
+    "---------------------------------------------------------------------------------------------------------",
+  ); //border
+
+  List<Drawable> drawable = [Rectangle("red", 30, 70)]; 
+  for (var item in drawable){
+    print("Area ${item.calculateArea()}");
+  }
+
+    print(
+    "---------------------------------------------------------------------------------------------------------",
+  ); 
+
+  Service test1 = Service(); 
+  test1.log("14th September "); 
+  AuthMiddleWare test2 = AuthMiddleWare(); 
+  test2.log("404"); 
+
+
 }
