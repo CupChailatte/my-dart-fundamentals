@@ -1,39 +1,19 @@
-abstract class Asset {
-  final double purchasePrice; //property
-  Asset(this.purchasePrice); //constructor
+class Book {
+  final String title;
+  final String author;
+  final int pages;
+  bool isPaperback; //is trye by default
 
-  double calculateValue(); //abstract method 
-}
+  Book(this.title, this.author, this.pages, this.isPaperback);
 
-mixin Maintainable {
-  void needsService() {
-    print("Item requires maintenance soon!");
-  }
-}
-
-class Truck extends Asset with Maintainable {
-  //subclass with abstract Asset class with Maintainable mixin.
-  Truck(double purchasePrice) : super(purchasePrice);
-
-  @override
-  double calculateValue() {
-    return purchasePrice * 0.8;
-  }
-}
-
-class Laptop with Maintainable {
-  @override
-  void needsService() {
-    print("Needs maintenance, go to your nearest repair shop");
+  void getSummary(){
+    print("title: $title, author : $author, pages: $pages, paperback: $isPaperback"); 
   }
 }
 
 void main() {
-  Truck toyota = Truck(43000); //instantiating the Truck class
-  print(
-    "The estimate current value of the car is:  ${toyota.calculateValue()} euros",
-  );
-
-  Laptop macbookPoo = Laptop(); 
-  macbookPoo.needsService(); 
+  final Book book1 = Book("Fall of Will Smith", "Jada", 540, true); 
+  final Book book2 = Book("Fall of Jada", "Will Smith", 357, true); 
+  book1.getSummary(); 
+  book2.getSummary(); 
 }
