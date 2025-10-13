@@ -1,32 +1,30 @@
-import 'dart:io';
+class Logger {
+  // 1. Static, private instance variable to hold the single instance
+  static final Logger _instance = Logger._internal();
 
-abstract class Logger {
-  //method
-   log(String message); 
-}
+  // 2. Generative constructor must be private (named with _)
+  // This prevents direct instantiation using new Logger()
+  Logger._internal();
 
-class ConsoleLogger implements Logger{
-  @override 
-   log(String message){
-    print("[LOGS TO CONSOLE] : $message"); 
+  // 3. Factory constructor: this is the public access point
+  factory Logger() {
+    // It returns the existing single instance
+    return _instance;
   }
-}
 
-class FileLogger implements Logger {
-
-  @override 
-   log(String message){
-    print("Writing to file: $message"); 
+  void log(String msg) {
+    print('LOG: $msg');
   }
-}
-
-void main(){
-  List<Logger> listOfLogger = [
-    ConsoleLogger(),
-    FileLogger(),
-  ]; 
   
-  for (var log in listOfLogger){
-    log.log("wASSYUP  "); 
-  }
+}
+
+void main() {
+  // Both logger1 and logger2 will refer to the SAME object.
+  var logger1 = Logger();
+  var logger2 = Logger();
+
+  logger1.log('Application started.'); // LOG: Application started.
+
+  // Check if they are the same instance
+  print(identical(logger1, logger2)); // Output: true
 }
