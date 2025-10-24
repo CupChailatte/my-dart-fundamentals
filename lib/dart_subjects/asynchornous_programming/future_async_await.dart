@@ -17,14 +17,13 @@
  * 
  */
 
-
-void main(){
+void main() {
   // The function signature shows it returns a Future that will eventually hold a String.
-Future<String> fetchUserData() {
-  // Future.delayed simulates a long-running task, like a network call.
-  return Future.delayed(
-    Duration(seconds: 2), // The delay
-    () => "User Data: Alice", // The value to return after the delay
-  );
-}
+  Future<String> fetchUserData() {
+    // Future.delayed simulates a long-running task, like a network call.
+    return Future.delayed(
+      Duration(seconds: 2), // The delay
+      () => "User Data: Alice", // The value to return after the delay
+    );
+  }
 }

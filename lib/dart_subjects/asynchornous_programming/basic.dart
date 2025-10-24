@@ -1,13 +1,12 @@
 Future<String> fetchUserBio() {
   return Future.delayed(
     Duration(seconds: 2),
-    () => "Dart enthusiast and coffee lover",
+    () => "Dart Enthusiast and coffee lover",
   );
 }
 
 Future<void> main() async {
-  print("Fetching user bio...");
+  print("Fetching user bio");
   String bio = await fetchUserBio();
-
-  print(bio);
+  print("Bio: $bio");
 }
