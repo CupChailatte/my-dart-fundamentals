@@ -14,13 +14,12 @@ void main() {
   List<dynamic> mixedArray = ["Cocoa", 14, false];
   List<String> fruits = ["apple", "pear", "orange", "banana"];
 
-  numbers.add(7); 
-  numbers.remove(2); 
-  print(numbers); 
-  print(animals); 
-  print(mixedArray); 
-  print(fruits); 
-
+  numbers.add(7);
+  numbers.remove(2);
+  print(numbers);
+  print(animals);
+  print(mixedArray);
+  print(fruits);
 }
 
 /*
