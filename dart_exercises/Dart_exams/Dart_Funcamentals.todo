@@ -1,0 +1,156 @@
+Dart Programming Comprehensive Exam
+This exam covers fundamental syntax, data structures, control flow, functions, Object-Oriented Programming (OOP), and Asynchronous Programming in Dart.
+
+Part 1: Fundamentals (10 Questions)
+Instructions: Choose the best answer or fill in the blank.
+
+Variable Declaration: Which keyword is used for a variable that must be initialized at the time of declaration and whose value cannot change?
+a) var
+b) final
+c) const
+d) late
+
+Null Safety: What does the ? symbol after a type (e.g., String? name;) signify?
+a) The variable must be initialized immediately.
+b) The variable is a constant.
+c) The variable is nullable and can hold a null value.
+d) The variable is a generic type.
+
+Data Types: What is the result of the following operation in Dart?
+
+print(10 / 3);
+
+a) 3
+b) 3.3333333333333335
+c) 3.0
+d) An error
+
+String Interpolation: What is the correct way to interpolate a complex expression (4 * 5) into a string?
+a) 'The result is $4 * 5'
+b) 'The result is ${4 * 5}'
+c) 'The result is (4 * 5)'
+d) 'The result is #4*5'
+
+List (Array): Given the list List<int> numbers = [1, 2, 3];, what is the output of numbers.length?
+
+--- Answer:
+
+Set: Which data structure stores a collection of unique items?
+a) List
+b) Map
+c) Set
+d) Queue
+
+Map: In a Map<String, int> scores = {'Alice': 95};, what is the data type of the key?
+
+--- Answer:
+
+Ternary Operator: Rewrite the following if-else statement using the ternary operator:
+
+String message;
+int age = 15;
+if (age >= 18) {
+  message = 'Adult';
+} else {
+  message = 'Minor';
+}
+
+--- Answer:
+
+Function Syntax: What is the purpose of the fat arrow (=>) notation in a Dart function?
+
+--- Answer:
+
+Loops: Write a for loop that prints all even numbers from 0 to 10 (inclusive).
+
+// Your code here
+
+Part 2: Object-Oriented Programming (OOP) (10 Questions)
+Instructions: Code or explain the concept as requested.
+
+Class & Constructor: Create a class named Book with two properties: title (String) and pages (int). Write a simple named constructor Book.fromDetails(String t, int p) to initialize these properties.
+
+// Your code here
+
+Encapsulation: In the Book class above, how would you make the pages property private (hidden from outside access)?
+
+--- Answer:
+
+Getter/Setter: For the private _pages property, write a getter to read its value and a setter to ensure the value is always greater than 0.
+
+// Your getter and setter here
+
+Inheritance: Create a new class Textbook that inherits from Book. Add a new property: subject (String). Write the constructor for Textbook using the super keyword.
+
+// Your code here
+
+Method Overriding: In the Book class, add a method String getDetails() => '$title has $_pages pages.'. Now, in the Textbook class, override this method to include the subject as well.
+
+// Your overridden method here
+
+Abstract Class: What is the main difference between a regular (concrete) class and an abstract class in Dart?
+
+--- Answer:
+
+Interface (implements): If you want a class Car to promise to implement all methods and properties of another class Vehicle, which keyword should Car use?
+
+--- Answer:
+
+Polymorphism: Briefly explain how the inheritance/interface structure in question 7 allows for polymorphism when working with a List<Vehicle>.
+
+--- Answer:
+
+Static Member: Explain the difference between an instance variable (e.g., title in Book) and a static variable (e.g., static int bookCount).
+
+--- Answer:
+
+Factory Constructor: In one sentence, what is the primary purpose of a factory constructor?
+
+--- Answer:
+
+Part 3: Asynchronous Programming (10 Questions)
+Instructions: Code or explain the concept as requested.
+
+Futures: What is a Future in Dart? (Analogous to a single package delivery 📦).
+
+--- Answer:
+
+async and await: What two keywords must you use to write asynchronous code that looks and behaves like synchronous code?
+
+--- Answer:
+
+Async Function: Write an async function named delayPrint(String message, int seconds) that waits for the specified number of seconds and then prints the message.
+
+// Your code here
+
+Error Handling (Future): Modify the delayPrint call in the main function below to catch a potential error using the try-catch block.
+
+void main() async {
+  // Assume delayPrint throws an error 50% of the time.
+  // Your try-catch code here:
+  await delayPrint("Test", 2);
+}
+
+Parallel Execution: You have three independent Future functions: fetchA(), fetchB(), and fetchC(). Which Dart API/function would you use to wait for all three to complete at the same time efficiently?
+
+--- Answer:
+
+Streams: What is a Stream in Dart? (Analogous to a continuous river 🌊).
+
+--- Answer:
+
+Stream Listener: What method must you call on a Stream object to start receiving the data events it emits?
+
+--- Answer:
+
+Async Generator: Write the function signature for a function that generates a stream of integers from 1 to 5.
+
+// Your function signature here
+
+Stream Consumption: Show how to consume (read) the values from the stream created in question 8 using the await for syntax inside an async function.
+
+// Your code here
+
+Blocking: Explain why calling sleep(Duration(seconds: 5)) inside a Flutter/Dart UI application's main thread is dangerous, and what synchronous approach should be used instead.
+
+--- Answer:
